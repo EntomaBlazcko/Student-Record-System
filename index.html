@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT RECORD SYSTEM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>STUDENT RECORD SYSTEM</h1>
+
+
+    <div class="form-container">
+        <div id="loginForm">
+            <h2>Login</h2>
+            <input type="text" id="loginUsername" placeholder="Username"><br>
+            <input type="password" id="loginPassword" placeholder="Password"><br>
+            <button id="loginBtn">Login</button>
+            <p>Don't have an account? <a href="#" id="showRegister">Register here</a></p>
+        </div>
+
+        
+        <div id="registrationForm" style="display: none;">
+            <h2>Register</h2>
+            <input type="text" id="regUsername" placeholder="Username"><br>
+            <input type="email" id="regEmail" placeholder="Email"><br>
+            <input type="password" id="regPassword" placeholder="Password"><br>
+            <input type="password" id="regConfirmPassword" placeholder="Confirm Password"><br>
+            <button id="registerBtn">Register</button>
+            <p>Already have an account?<a href="#" id="showLogin">Login here</a></p>
+        </div>
+    </div>
+
+    
+
+<div id="usernameDisplay" style="position: absolute; top: 10px; left: 20px; font-weight: bold; padding-top: 10px; font-size: 20px;"></div>
+    <div id="crudSection" style="display: none;">
+
+        <img src="" id="preview" style="height: 100px;">
+        <label for="file">Upload a Picture (Optional)</label>
+        <input type="file" id="file" accept="image/*"><br>
+
+        <div id="form">
+            <input type="hidden" id="index"><br>
+        
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" placeholder="Ex: Juan"><br>
+        
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" placeholder="Ex: Dela Cruz"><br>
+        
+            <label for="course">Course</label>
+            <input type="text" id="course" placeholder="Ex: BSCE"><br>
+        
+            <label for="section">Section</label>
+            <input type="text" id="section" placeholder="Ex: 3A"><br>
+        
+
+            <button id="submit">Add New</button>
+            <button id="update"></button>
+        </div>
+        
+
+        <div id="table">
+            <table style="width: 100%">
+                <thead>
+                    <tr>
+                        <th>Seq No.</th>
+                        <th>ID No.</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Course</th>
+                        <th>Section</th>
+                        <th>Picture</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td colspan="7" style="text-align: center">
+                            No data found in the table.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="paginationControls">
+            <button id="prevPage" disabled>&lt; Prev</button>
+            <span id="pageInfo"></span>
+            <button id="nextPage">Next &gt;</button>
+        </div>
+
+        <button id="logoutBtn">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
